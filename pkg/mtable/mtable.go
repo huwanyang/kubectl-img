@@ -1,6 +1,3 @@
-/*
- * 通过 gotable 组件将结果美化输出
- */
 package mtable
 
 import (
@@ -9,10 +6,13 @@ import (
 	"github.com/liushuochen/gotable/table"
 )
 
-var title []string = []string{
+var title = []string{
 	"NAMESPACE", "TYPE", "RESOURCE_NAME", "CONTAINER_NAME", "IMAGE",
 }
 
+/*
+ * 通过 gotable 组件将结果美化输出
+ */
 func GenTable(mapList []map[string]string) *table.Table {
 	table, err := gotable.Create(title...)
 	if err != nil {

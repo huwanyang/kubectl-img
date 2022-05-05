@@ -1,7 +1,3 @@
-/*
- * 获取 k8s-api clientSet
- */
-
 package kube
 
 import (
@@ -9,6 +5,9 @@ import (
 	"k8s.io/client-go/kubernetes"
 )
 
+/*
+ * 获取 k8s-api clientSet
+ */
 func ClientSet(configFlags *genericclioptions.ConfigFlags) *kubernetes.Clientset {
 	config, err := configFlags.ToRESTConfig()
 	if err != nil {
