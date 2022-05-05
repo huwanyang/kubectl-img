@@ -1,3 +1,7 @@
+/*
+ * 获取 k8s-api clientSet
+ */
+
 package kube
 
 import (

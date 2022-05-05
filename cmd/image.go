@@ -30,7 +30,7 @@ func init() {
 	rootCmd.AddCommand(imageCmd)
 }
 
-func image (cmd *cobra.Command, args []string) {
+func image(cmd *cobra.Command, args []string) {
 	fmt.Println("image command func called")
 	clientSet := kube.ClientSet(KubernetesConfigFlags)
 	ns, _ := rootCmd.Flags().GetString("namespace")
@@ -77,7 +77,7 @@ func image (cmd *cobra.Command, args []string) {
 	fmt.Printf("length rList: %d\n", len(rList))
 
 	resourceMap := make([]map[string]string, 0)
-	for i:=0; i<len(rList); i++{
+	for i := 0; i < len(rList); i++ {
 		switch t := rList[i].(type) {
 		case *appv1.DeploymentList:
 			for k := 0; k < len(t.Items); k++ {

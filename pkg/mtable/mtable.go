@@ -1,6 +1,6 @@
 /*
  * 通过 gotable 组件将结果美化输出
-*/
+ */
 package mtable
 
 import (

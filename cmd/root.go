@@ -47,5 +47,3 @@ func init() {
 	KubernetesConfigFlags = genericclioptions.NewConfigFlags(true)
 	KubernetesConfigFlags.AddFlags(rootCmd.PersistentFlags())
 }
-
-
