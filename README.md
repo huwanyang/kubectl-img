@@ -1,6 +1,6 @@
 [![ci-release](https://github.com/huwanyang/kubectl-img/actions/workflows/ci-release.yml/badge.svg?branch=master)](https://github.com/huwanyang/kubectl-img/actions/workflows/ci-release.yml)
-[![Go Report Card](https://goreportcard.com/badge/github.com/huwanyang/kubectl-img)](https://goreportcard.com/report/github.com/huwanyang/kubectl-img)
-[![GitHub License](https://img.shields.io/github/license/huwanyang/kubectl-img?color=green&logo=apache)](https://github.com/huwanyang/kubectl-img/blob/master/LICENSE)
+[![Go Report Card](https://img.shields.io/badge/go%20report-A+-brightgreen.svg?style=flat)](https://goreportcard.com/report/github.com/huwanyang/kubectl-img)
+[![GitHub License](https://img.shields.io/github/license/huwanyang/kubectl-img?color=brightgreen&logo=apache)](https://github.com/huwanyang/kubectl-img/blob/master/LICENSE)
 
 kubectl-img 是基于 Cobra 脚手架创建的命令插件，可以显示指定的 k8s 资源类型（deployments|daemonsets|statefulsets|jobs|cronjobs）
 的 image 信息，并支持多种输出方式（json|yaml|xml|table）。
