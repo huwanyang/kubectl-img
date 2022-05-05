@@ -1,0 +1,6 @@
+.idea/
+dist/
+
+kubectl-img
+.DS_Store
+
