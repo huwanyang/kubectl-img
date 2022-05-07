@@ -81,8 +81,8 @@ $ kubectl-img image -d -n hwy-demo
 +-----------+------------+----------------+----------------+--------------+
 | NAMESPACE |    TYPE    | RESOURCE_NAME  | CONTAINER_NAME |    IMAGE     |
 +-----------+------------+----------------+----------------+--------------+
-| hwy-demo  | deployment |   hwy-nginx    |    nginx-1     | nginx:latest |
-| hwy-demo  | deployment | hwy-nginx-test |   nginx-test   | nginx:latest |
+| hwy-demo  | Deployment |   hwy-nginx    |    nginx-1     | nginx:latest |
+| hwy-demo  | Deployment | hwy-nginx-test |   nginx-test   | nginx:latest |
 +-----------+------------+----------------+----------------+--------------+
 
 # 显示指定 Namespace 的所有资源 images
@@ -90,14 +90,13 @@ $ kubectl-img image -dafcj -n hwy-demo
 +-----------+------------+-------------------------+----------------+--------------+
 | NAMESPACE |    TYPE    |      RESOURCE_NAME      | CONTAINER_NAME |    IMAGE     |
 +-----------+------------+-------------------------+----------------+--------------+
-| hwy-demo  | deployment |        hwy-nginx        |    nginx-1     | nginx:latest |
-| hwy-demo  | deployment |     hwy-nginx-test      |   nginx-test   | nginx:latest |
-| hwy-demo  |    job     | cronjob-demo-1619797860 |     hello      |   busybox    |
-| hwy-demo  |    job     | cronjob-demo-1651908480 |     hello      |   busybox    |
-| hwy-demo  |    job     | cronjob-demo-1651908600 |     hello      |   busybox    |
-| hwy-demo  |    job     | cronjob-demo-1651908720 |     hello      |   busybox    |
-| hwy-demo  |    job     | cronjob-demo-1651908840 |     hello      |   busybox    |
-| hwy-demo  |  cronjob   |      cronjob-demo       |     hello      |   busybox    |
+| hwy-demo  | Deployment |        hwy-nginx        |    nginx-1     | nginx:latest |
+| hwy-demo  | Deployment |     hwy-nginx-test      |   nginx-test   | nginx:latest |
+| hwy-demo  |    Job     | cronjob-demo-1619797860 |     hello      |   busybox    |
+| hwy-demo  |    Job     | cronjob-demo-1651911360 |     hello      |   busybox    |
+| hwy-demo  |    Job     | cronjob-demo-1651911480 |     hello      |   busybox    |
+| hwy-demo  |    Job     | cronjob-demo-1651911600 |     hello      |   busybox    |
+| hwy-demo  |  CronJob   |      cronjob-demo       |     hello      |   busybox    |
 +-----------+------------+-------------------------+----------------+--------------+
 
 # 指定输出格式
@@ -108,14 +107,14 @@ $ kubectl-img image -d -n hwy-demo -o json
       "IMAGE": "nginx:latest",
       "NAMESPACE": "hwy-demo",
       "RESOURCE_NAME": "hwy-nginx",
-      "TYPE": "deployment"
+      "TYPE": "Deployment"
    },
    {
       "CONTAINER_NAME": "nginx-test",
       "IMAGE": "nginx:latest",
       "NAMESPACE": "hwy-demo",
       "RESOURCE_NAME": "hwy-nginx-test",
-      "TYPE": "deployment"
+      "TYPE": "Deployment"
    }
 ]
 ```
